@@ -32,15 +32,16 @@
     <div class="header__wrapper">
       <div class="container">
         <div class="header__body">
-          <button class="burger-btn" type="button"></button>
+          <button class="burger-btn" type="button" aria-label="кнопка меню"></button>
           <div class="header__search search">
             <form class="header__search-form">
-              <button class="search__button" type="submit">
+              <button class="search__button" type="submit" aria-label="кнопка поиска">
                 <svg class="search__icon" width="14" height="14">
                   <use xlink:href="img/sprite.svg#search"></use>
                 </svg>
               </button>
-              <input type="text" placeholder="Type here to search">
+              <label class="visually-hidden" for="serch">Строка поиска</label>
+              <input type="text" placeholder="Type here to search" name='serch' id="serch">
             </form>
           </div>
           <a class="header__logo logo">
@@ -369,12 +370,12 @@
             </div>
           </div>
           <div class="new__slider-buttons">
-            <button class="new__slider-button new__slider-button--prev">
+            <button class="new__slider-button new__slider-button--prev" aria-label="предыдущий слайд">
               <svg class="new__slider-arrow-icon" width="29" height="9">
                 <use xlink:href="img/sprite.svg#arrow-left"></use>
               </svg>
             </button>
-            <button class="new__slider-button new__slider-button--next">
+            <button class="new__slider-button new__slider-button--next" aria-label="следующий слайд">
               <svg class="new__slider-arrow-icon" width="29" height="9">
                 <use xlink:href="img/sprite.svg#arrow-right"></use>
               </svg>
@@ -383,7 +384,7 @@
           <div class="slider-pagination"></div>
           <div class="slider-mobile-pagination">
             <span class="slider-mobile-pagination__current">current</span>
-           ;&nbsp;of&nbsp;&nbsp;
+           &nbsp;of&nbsp;&nbsp;
             <span class="slider-mobile-pagination__total">total</span>
           </div>
         </div>
@@ -482,22 +483,22 @@
           <h2>Frequently asked questions</h2>
           <div class="faq__list">
             <div class="faq__item">
-              <button class="faq__question">What materials are the jewellery made of?</button>
+              <button class="faq__question" aria-label="раскрывающийся споисок">What materials are the jewellery made of?</button>
               <div class="faq__answer faq__answer--show">Our jewellerry is made of solid gold, silver or leather. Also,
                 some jewellery contains precious and semiprecious stones and crystals.</div>
             </div>
             <div class="faq__item">
-              <button class="faq__question">Which countries do you deliver to?</button>
+              <button class="faq__question" aria-label="раскрывающийся споисок">Which countries do you deliver to?</button>
               <div class="faq__answer">Our jewellerry is made of solid gold, silver or leather. Also, some jewellery
                 contains precious and semiprecious stones and crystals.</div>
             </div>
             <div class="faq__item">
-              <button class="faq__question">What are the payment methods?</button>
+              <button class="faq__question" aria-label="раскрывающийся споисок">What are the payment methods?</button>
               <div class="faq__answer">Our jewellerry is made of solid gold, silver or leather. Also, some jewellery
                 contains precious and semiprecious stones and crystals.</div>
             </div>
             <div class="faq__item">
-              <button class="faq__question">Can I return the<br> jewellery if it didn’t fit me?</button>
+              <button class="faq__question" aria-label="раскрывающийся споисок">Can I return the<br> jewellery if it didn’t fit me?</button>
               <div class="faq__answer">Our jewellerry is made of solid gold, silver or leather. Also, some jewellery
                 contains precious and semiprecious stones and crystals.</div>
             </div>
@@ -617,10 +618,11 @@
           <p>News and updates from CH. No spam, we promise.</p>
           <div class="signup__form">
             <form action="#">
-              <input type="text" placeholder="Your E-mail">
-              <button class="signup__button" type="submit">
+              <label class="visually-hidden" for="signup-email">поля для ввода email</label>
+              <input type="text" placeholder="Your E-mail" name="signup-email" id="signup-email">
+              <button class="signup__button" type="submit" aria-label="кнопка регистрации">
                 Sign Up
-                <img src="img/signup-arrow.svg" alt="">
+                <img src="img/signup-arrow.svg" alt="image" width="29" height="9">
               </button>
             </form>
           </div>
@@ -705,7 +707,7 @@
   <div class="overlay"></div>
   <div class="modal">
     <div class="login title">
-      <button class="login__close-button" type="button">
+      <button class="login__close-button" type="button" aria-label="логин">
         <svg class="login__close-icon" width="14" height="14">
           <use xlink:href="img/sprite.svg#close"></use>
         </svg>
@@ -740,7 +742,7 @@
             <div class="login__forget-link-wrapper">
               <a class="login__forget-link" href="#">Forgot your password?</a>
             </div>
-            <button class="login__button" type="submit">Log In</button>
+            <button class="login__button" type="submit" aria-label="логин">Log In</button>
           </form>
           <div class="login__signup">
             <span class="login__signup-text">Don’t have an account?</span>

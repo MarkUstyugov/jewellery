@@ -41,6 +41,10 @@
   margin: 0 22%;
   height: 1px;
   background-color: #a87b62;
+
+  @media(max-width: $tablet) {
+    margin: 0 25% 0 20%;
+  }
 }
 .price-slider__price {
   display: flex;

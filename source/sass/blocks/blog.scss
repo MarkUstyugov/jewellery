@@ -49,7 +49,7 @@
     flex-direction: column;
   }
 }
-.blog__acticle:nth-child(2) {
+.blog__acticle:nth-child(even) {
   grid-row: 2;
 }
 .blog__acticle:nth-child(odd) .blog__acticle-text {
