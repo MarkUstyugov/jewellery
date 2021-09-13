@@ -27,10 +27,10 @@
     <div class="header__wrapper">
       <div class="container">
         <div class="header__body">
-          <button class="burger-btn" type="button"></button>
+          <button class="burger-btn" type="button" aria-label="кнопка меню"></button>
           <div class="header__search search">
             <form class="header__search-form">
-              <button class="search__button" type="submit">
+              <button class="search__button" type="submit" aria-label="кнопка поиска">
                 <svg class="search__icon" width="14" height="14">
                   <use xlink:href="img/sprite.svg#search"></use>
                 </svg>
@@ -113,16 +113,16 @@
     <div class="catalog">
       <div class="catalog__body">
         <div class="catalog__filter-wrapper">
-          <button class="catalog__filter-open">Filter</button>
+          <button class="catalog__filter-open" aria-label="кпока открытия фильтра товаров">Filter</button>
           <div class="catalog__filter filter">
-            <button class="filter__button-close">
+            <button class="filter__button-close" aria-label="кпока закрытия фильтра товаров">
               <svg class="filter__close-icon" width="32" height="32">
                 <use xlink:href="img/sprite.svg#close-round"></use>
               </svg>
             </button>
             <form action="#">
               <div class="filter__item">
-                <button class="filter__button" type="button">Product</button>
+                <button class="filter__button" type="button" aria-label="список продуктов">Product</button>
                 <div class="filter__content">
                   <div class="filter__input">
                     <input class="visually-hidden" type="checkbox" name="necklaces" id="necklaces" tabindex="0">
@@ -143,7 +143,7 @@
                 </div>
               </div>
               <div class="filter__item">
-                <button class="filter__button" type="button">Material</button>
+                <button class="filter__button" type="button" aria-label="список материалов">Material</button>
                 <div class="filter__content">
                   <div class="filter__input">
                     <input class="visually-hidden" type="checkbox" name="gold" id="gold">
@@ -156,7 +156,7 @@
                 </div>
               </div>
               <div class="filter__item">
-                <button class="filter__button" type="button">Collection</button>
+                <button class="filter__button" type="button" aria-label="список коллекций">Collection</button>
                 <div class="filter__content">
                   <div class="filter__input">
                     <input class="visually-hidden" type="checkbox" name="pink-flamingo" id="pink-flamingo">
@@ -169,15 +169,15 @@
                 </div>
               </div>
               <div class="filter__item">
-                <button class="filter__button" type="button">Price</button>
+                <button class="filter__button" type="button" aria-label="цена">Price</button>
                 <div class="filter__content filter__content--price">
                   <div class="filter__price-range price-slider">
                     <div class="price-slider__control">
                       <div class="price-slider__scale">
                         <div class="price-slider__bar"></div>
                       </div>
-                      <button class="price-slider__toggle price-slider__toggle--min" type="button"></button>
-                      <button class="price-slider__toggle price-slider__toggle--max" type="button"></button>
+                      <button class="price-slider__toggle price-slider__toggle--min" type="button" aria-label="минимальная цена"></button>
+                      <button class="price-slider__toggle price-slider__toggle--max" type="button" aria-label="максимальная цена"></button>
                     </div>
                     <div class="price-slider__price">
                       <div class="price-slider__number price-slider__number--min">$ 55</div>
@@ -187,8 +187,8 @@
                 </div>
               </div>
               <div class="filter__form-buttons">
-                <button class="filter__form-button filter__form-button--submit" type="submit">Apply</button>
-                <button class="filter__form-button filter__form-button--reset" type="reset">Clear All</button>
+                <button class="filter__form-button filter__form-button--submit" type="submit" aria-label="применить фильтр">Apply</button>
+                <button class="filter__form-button filter__form-button--reset" type="reset" aria-label="очистить фильтр">Clear All</button>
               </div>
             </form>
           </div>
@@ -1296,9 +1296,9 @@
       <div class="catalog__bottom">
         <div class="catalog__bottom-wrapper container">
           <div class="catalog__slider-controls">
-            <button class="catalog__slider-button catalog__slider-button-prev" type="button">Previous</button>
+            <button class="catalog__slider-button catalog__slider-button-prev" type="button" aria-label="предыдущий слайд">Previous</button>
             <div class="catalog__slider-pagination"></div>
-            <button class="catalog__slider-button catalog__slider-button-next" type="button">Next</button>
+            <button class="catalog__slider-button catalog__slider-button-next" type="button" aria-label="следующий слайд">Next</button>
           </div>
         </div>
       </div>
@@ -1314,7 +1314,7 @@
           <div class="signup__form">
             <form action="#">
               <input type="text" placeholder="Your E-mail">
-              <button class="signup__button" type="submit">
+              <button class="signup__button" type="submit" aria-label="регистрация">
                 Sign Up
                 <img src="img/signup-arrow.svg" alt="">
               </button>
@@ -1401,7 +1401,7 @@
   <div class="overlay"></div>
   <div class="modal">
     <div class="login title">
-      <button class="login__close-button" type="button">
+      <button class="login__close-button" type="button" aria-label="закрития формы логин">
         <svg class="login__close-icon" width="14" height="14">
           <use xlink:href="img/sprite.svg#close"></use>
         </svg>
@@ -1433,7 +1433,7 @@
             <div class="login__forget-link-wrapper">
               <a class="login__forget-link" href="#">Forgot your password?</a>
             </div>
-            <button class="login__button" type="submit">Log In</button>
+            <button class="login__button" type="submit" aria-label="войти">Log In</button>
           </form>
           <div class="login__signup">
             <span class="login__signup-text">Don’t have an account?</span>
