@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jewellery">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/style.min.css">
+
+  <link rel="preload" href="fonts/poppins-v15-latin-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/poppins-v15-latin-500.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/poppins-v15-latin-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+  <link rel="preload" href="fonts/cormorant-garamond-v9-latin-500.woff2" as="font" type="font/woff2"
+    crossorigin="anonymous">
+  <link rel="preload" href="fonts/cormorant-garamond-v9-latin-500italic.woff2" as="font" type="font/woff2"
+    crossorigin="anonymous">
+  <link rel="preload" href="fonts/cormorant-garamond-v9-latin-italic.woff2" as="font" type="font/woff2"
+    crossorigin="anonymous">
+  <link rel="preload" href="fonts/cormorant-garamond-v9-latin-600.woff2" as="font" type="font/woff2"
+    crossorigin="anonymous">
+  <link rel="preload" href="fonts/cormorant-garamond-v9-latin-700.woff2" as="font" type="font/woff2"
+    crossorigin="anonymous">
+
+  <title>Jewellery</title>
+</head>
+
+<body class="page login-page no-js">
+
+  <header class="header">
+    <div class="header__wrapper">
+      <div class="container">
+        <div class="header__body">
+          <a class="header__logo logo" href="index.html">
+            <svg class="logo__icon" width="66" height="66">
+              <use xlink:href="img/sprite.svg#logo"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <h1 class="visually-hidden">Страница логина</h1>
+    <div class="login-page__wrapper">
+      <div class="login title">
+        <button class="login__close-button" type="button">
+          <svg class="login__close-icon" width="14" height="14">
+            <use xlink:href="img/sprite.svg#close"></use>
+          </svg>
+        </button>
+        <div class="login__image-wrapper">
+          <picture>
+            <!-- 1x: 270px  2x: 540px -->
+            <source type="image/webp" media="(max-width: 767px)"
+              srcset="img/login/login_mob@1x.webp 1x, img/login/login_mob@2x.webp 2x">
+            <!-- 1x: 442px  2x: 884px -->
+            <source type="image/webp" media="(max-width: 1023px)"
+              srcset="img/login/login_tab@1x.webp 1x, img/igm/login_tab@2x.webp 2x">
+            <!-- 1x: 430px  2x: 860px -->
+            <source type="image/webp" srcset="img/login/login_desk@1x.webp 1x, img/login/login_desk@2x.webp 2x">
+            <!-- 1x: 430px  2x: 860px -->
+            <img src="img/login/login_desk@1x.jpg" srcset="img/login/login_desk@2x.jpg 2x" width="430" height="138"
+              alt="image">
+          </picture>
+        </div>
+        <div class="login__body">
+          <h2>Log In</h2>
+          <div class="login__form-wrapper">
+            <form class="login__form" action="#">
+              <div class="login__input login__input--email">
+                <label for="login-email"></label>
+                <input type="text" placeholder="Your E-mail" id="login-email" name="login-email">
+              </div>
+              <div class="login__input">
+                <label for="login-password"></label>
+                <input type="text" placeholder="Password" id="login-password" name="login-password">
+              </div>
+              <div class="login__forget-link-wrapper">
+                <a class="login__forget-link" href="#">Forgot your password?</a>
+              </div>
+              <button class="login__button" type="submit">Log In</button>
+            </form>
+            <div class="login__signup">
+              <span class="login__signup-text">Don’t have an account?</span>
+              <a class="login__signup-link" href="#">Sign up</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>

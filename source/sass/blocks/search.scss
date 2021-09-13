@@ -1,0 +1,36 @@
+.search {
+  position: relative;
+}
+.search__button {
+  position: absolute;
+  top: 13px;
+  left: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (max-width: $tablet) {
+    top: 12px;
+    left: 12px;
+  }
+}
+.search__icon {
+  width: 14px;
+  height: 14px;
+  fill: #000;
+
+  @media (max-width: $tablet) {
+    width: 16px;
+    height: 16px;
+    fill: #fff;
+  }
+}

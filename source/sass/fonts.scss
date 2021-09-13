@@ -1,0 +1,71 @@
+@font-face {
+  font-family: 'Poppins-Regular';
+  src: url('../fonts/poppins-v15-latin-regular.woff2') format('woff2'),
+      url('../fonts/poppins-v15-latin-regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins-Medium';
+  src: url('../fonts/poppins-v15-latin-500.woff2') format('woff2'),
+      url('../fonts/poppins-v15-latin-500.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins-Bold';
+  src: url('../fonts/poppins-v15-latin-700.woff2') format('woff2'),
+      url('../fonts/poppins-v15-latin-700.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CormorantGaramond-Medium';
+  src: url('../fonts/cormorant-garamond-v9-latin-500.woff2') format('woff2'),
+      url('../fonts/cormorant-garamond-v9-latin-500.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CormorantGaramond-MediumItalic';
+  src: url('../fonts/cormorant-garamond-v9-latin-500italic.woff2') format('woff2'),
+      url('../fonts/cormorant-garamond-v9-latin-500italic.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CormorantGaramond-RegularItalic';
+  src: url('../fonts/cormorant-garamond-v9-latin-italic.woff2') format('woff2'),
+      url('../fonts/cormorant-garamond-v9-latin-italic.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CormorantGaramond-SemiBold';
+  src: url('../fonts/cormorant-garamond-v9-latin-600.woff2') format('woff2'),
+      url('../fonts/cormorant-garamond-v9-latin-600.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CormorantGaramond-Bold';
+  src: url('../fonts/cormorant-garamond-v9-latin-700.woff2') format('woff2'),
+      url('../fonts/cormorant-garamond-v9-latin-700.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}

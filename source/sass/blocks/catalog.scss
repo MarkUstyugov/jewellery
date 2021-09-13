@@ -1,0 +1,225 @@
+.catalog {
+  position: relative;
+}
+.catalog-main .promo {
+  background-image: url(../img/catalog-promo-bg_desk.jpg);
+
+  @media (max-width: $tablet) {
+    background-image: url(../img/catalog-promo-bg_tab.jpg);
+  }
+
+  @media (max-width: $mobile) {
+    background-image: url(../img/catalog-promo-bg_mob.jpg);
+  }
+}
+.catalog__filter-wrapper {
+  padding: 0 0 0 15px;
+
+  @media (max-width: $tablet) {
+    padding: 0 45px;
+  }
+
+  @media (max-width: $mobile) {
+    padding: 0 15px;
+  }
+}
+.catalog-main .promo__body {
+  padding: 93px 0;
+
+  @media (max-width: $mobile) {
+    padding: 78px 0;
+  }
+}
+.catalog-main h2 {
+  font-family: "CormorantGaramond-Bold", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 44px;
+  color: #ffffff;
+  margin: 0 0 3px 0;
+}
+.catalog-main p {
+  font-family: "CormorantGaramond-MediumItalic", "Arial", sans-serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 29px;
+  color: #ffffff;
+}
+.catalog__filter {
+  flex-shrink: 0;
+}
+.catalog__slider-wrapper {
+  max-width: 900px;
+  min-width: 0;
+
+  @media (max-width: $tablet) {
+    max-width: 100%;
+    padding: 0 30px;
+  }
+
+  @media (max-width: $tablet) {
+    padding: 0;
+  }
+}
+.catalog__slider {
+  overflow: hidden;
+}
+.catalog__slider-item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.catalog__body {
+  padding: 80px 0 0 0;
+  display: flex;
+  flex-wrap: nowrap;
+  max-width: 1200px;
+  position: relative;
+  margin: 0 auto;
+  justify-content: space-between;
+
+  @media (max-width: $tablet) {
+    display: block;
+    padding: 48px 0 0 0;
+  }
+
+  @media (max-width: $tablet) {
+    padding: 39px 0 0 0;
+  }
+}
+.catalog__card {
+  text-align: center;
+  max-width: 270px;
+  margin: 0 15px 36px 15px;
+
+  @media (max-width: $tablet) {
+    max-width: 206px;
+  }
+
+  @media (max-width: $mobile) {
+    max-width: 130px;
+    margin: 0 15px 26px 15px;
+  }
+}
+.catalog__bottom {
+  border-top: 1px solid #f6f5f4;
+  padding: 0 0 75px 0;
+
+  @media (max-width: $mobile) {
+    border: none;
+    padding: 0 0 65px 0;
+  }
+}
+.catalog__slider-controls {
+  max-width: 74.3%;
+  display: flex;
+  justify-content: space-between;
+  margin: 35px 0 0 auto;
+
+  @media (max-width: $tablet) {
+    max-width: 100%;
+  }
+
+  @media (max-width: $mobile) {
+    justify-content: center;
+    margin: 16px 0 0 0;
+  }
+}
+.catalog__slider-pagination {
+  text-align: center;
+  margin-left: -38px;
+
+  @media (max-width: $mobile) {
+    margin: 0;
+    margin-left: -5px;
+  }
+}
+.catalog__filter-open {
+  display: none;
+
+  @media (max-width: $tablet) {
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: #a87b62;
+    color: #ffffff;
+    padding: 26px 30px;
+    margin: 0 0 50px 0;
+    cursor: pointer;
+  }
+
+  @media (max-width: $tablet) {
+    margin: 0 0 39px 0;
+  }
+}
+.catalog__card-img-wrapper {
+  margin: 0;
+  width: 270px;
+  height: 272px;
+
+  @media (max-width: $tablet) {
+    width: 206px;
+    height: 208px;
+  }
+
+  @media (max-width: $mobile) {
+    width: 130px;
+    height: 136px;
+  }
+}
+.catalog__card-img-wrapper img {
+  display: block;
+}
+.catalog__card-link {
+  text-decoration: none;
+  display: block;
+}
+.catalog__card h3 {
+  font-family: "Poppins-Medium", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  color: #1d1613;
+  margin: 21px 0 0 0;
+  padding: 0 0 0 6px;
+
+  @media (max-width: $mobile) {
+    margin: 16px 0 0 0;
+    padding: 0;
+  }
+}
+.catalog__card p {
+  font-family: "Poppins-Medium", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  color: #1d1613;
+  font-style: normal;
+  margin: 6px 0 0 0;
+}
+.catalog__slider-button {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (max-width: $mobile) {
+    display: none;
+  }
+}
+.catalog .swiper-pagination-bullet {
+  margin: 0 7px;
+
+  @media (max-width: $mobile) {
+    margin: 0 12px;
+  }
+}

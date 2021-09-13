@@ -1,0 +1,91 @@
+.signup {
+  width: 500px;
+
+  @media (max-width: $tablet) {
+    width: 100%;
+  }
+}
+.signup h2 {
+  margin: 0 0 9px;
+  padding: 0;
+  letter-spacing: 0.8px;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 44px;
+  font-family: "CormorantGaramond-Bold", "Arial", sans-serif;
+  color: #fff;
+
+  @media (max-width: $mobile) {
+    margin: 0 47px 14px 0;
+  }
+}
+.signup p {
+  font-family: "Poppins-Regular", "Arial", sans-serif;
+  margin: 0 0 34px;
+  padding: 0;
+  font-weight: 400;
+  font-size: 16px;
+  color: #9b9997;
+
+  @media (max-width: $mobile) {
+    margin: 0 47px 34px 0;
+  }
+}
+.signup__button {
+  margin: 5px -7px 0 0;
+  background-color: transparent;
+  border: 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  font-family: "Poppins-Medium", "Arial", sans-serif;
+  color: #fff;
+  flex-shrink: 0;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+.signup__button img {
+  margin: 0 0 0 8px;
+}
+.signup__form {
+  padding: 0 0 9px 0;
+  border-bottom: 1px solid #ffffff;
+
+  @media(max-width: $tablet) {
+    width: 560px;
+  }
+
+  @media(max-width: $mobile) {
+    width: 100%;
+  }
+}
+.signup__form form {
+  display: flex;
+  justify-content: space-between;
+}
+.signup__form input {
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+  width: 70%;
+  padding: 5px 0 0 0;
+
+  &:hover {
+    outline-offset: 8px;
+  }
+
+  &::placeholder {
+    font-family: "Poppins-Medium", "Arial", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color: #9b9997;
+  }
+}

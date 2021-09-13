@@ -1,0 +1,17 @@
+.logo__icon {
+  fill: #a87b62;
+  stroke: #a87b62;
+  width: 66px;
+  height: 66px;
+  stroke: 1px;
+
+  @media (max-width: $tablet) {
+    width: 66px;
+    height: 66px;
+  }
+
+  @media (max-width: $mobile) {
+    width: 52px;
+    height: 52px;
+  }
+}

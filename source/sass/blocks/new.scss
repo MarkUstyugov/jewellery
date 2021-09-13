@@ -1,0 +1,133 @@
+.new__body {
+  position: relative;
+  padding: 120px 0 78px 0;
+
+  @media (max-width: $tablet) {
+    padding: 70px 0 78px 0;
+  }
+
+  @media (max-width: $mobile) {
+    padding: 60px 0 56px 0;
+  }
+}
+.new__header {
+  text-align: center;
+  margin: 0 0 59px 0;
+
+  @media (max-width: $tablet) {
+    margin: 0 0 50px 0;
+  }
+
+  @media (max-width: $mobile) {
+    margin: 0 0 39px 0;
+  }
+}
+.new__header h2 {
+  margin: 0 0 24px 0;
+
+  @media (max-width: $tablet) {
+    margin: 0 0 19px 0;
+  }
+}
+.new__slide {
+  text-align: center;
+}
+.new__slide img {
+  width: 270px;
+  object-fit: cover;
+
+  @media (max-width: $tablet) {
+    width: 324px;
+  }
+
+  @media (max-width: $mobile) {
+    width: 130px;
+  }
+}
+.new__slider-button {
+  padding: 0;
+  position: absolute;
+  top: 161px;
+  z-index: 5;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 29px;
+  height: 12px;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (max-width: $tablet) {
+    width: 36px;
+    height: 15px;
+    top: 112px;
+  }
+
+  @media (max-width: $mobile) {
+    display: none;
+  }
+}
+.new__slide-link {
+  text-decoration: none;
+  display: block;
+}
+.new__slide h3 {
+  font-size: 16px;
+  line-height: 21px;
+  color: #1d1613;
+  margin: 16px 0 6px 0;
+
+  @media (max-width: $mobile) {
+    margin: 11px 0 6px 0;
+  }
+}
+.new__slide-link--first h3 {
+  @media (max-width: $tablet) {
+    margin-right: -13px;
+  }
+
+  @media (max-width: $mobile) {
+    margin-right: 0;
+  }
+}
+.new__slide p {
+  font-family: "Poppins-Bold", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  color: #1d1613;
+  margin: 0;
+}
+.new__slider-arrow-icon {
+  width: 29px;
+  height: 12px;
+  fill: #a87b62;
+  stroke: #a87b62;
+
+  @media (max-width: $tablet) {
+    width: 36px;
+    height: 15px;
+  }
+}
+.new__link.more-link {
+  padding: 0;
+
+  @media (max-width: $tablet) {
+    padding: 0 0 5px 0;
+  }
+}
+.new__slider-button--prev {
+  left: 0;
+}
+.new__slider-button--next {
+  right: 0;
+}

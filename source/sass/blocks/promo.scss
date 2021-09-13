@@ -1,0 +1,67 @@
+.promo {
+  background-color: #a87b62;
+  background-image: url(../img/promo-bg_desk.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+
+  @media(max-width: $tablet) {
+    background-image: url(../img/promo-bg_tab.jpg);
+  }
+
+  @media(max-width: $mobile) {
+    background-image: url(../img/promo-bg_mob.jpg);
+  }
+}
+.promo__body {
+  padding: 182px 0 180px 0;
+
+  @media(max-width: $tablet) {
+    padding: 182px 0 179px;
+  }
+
+  @media(max-width: $mobile) {
+    padding: 189px 0 186px;
+  }
+}
+.promo__body h2 {
+  font-family: "CormorantGaramond-Bold", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 58px;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  margin: 0 0 -5px 0;
+  text-align: center;
+  text-transform: uppercase;
+
+  @media (max-width: $tablet) {
+    margin: 0 0 -5px -15px;
+  }
+
+  @media (max-width: $mobile) {
+    margin: 0 0 -5px 0;
+    font-size: 38px;
+    line-height: 49px;
+  }
+}
+.promo__body p {
+  font-family: "CormorantGaramond-RegularItalic", "Arial", sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 49px;
+  color: #ffffff;
+  margin: 0;
+  text-align: center;
+
+  @media (max-width: $tablet) {
+    margin: 0 0 0 -15px;
+  }
+
+  @media (max-width: $mobile) {
+    margin: 0;
+    font-size: 34px;
+    line-height: 44px;
+  }
+}

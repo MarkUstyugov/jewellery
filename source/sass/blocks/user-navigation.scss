@@ -1,0 +1,51 @@
+.user-navigation {
+  display: flex;
+}
+.user-navigation__item--login {
+  @media (max-width: $tablet) {
+    display: none;
+  }
+}
+.user-navigation__link,
+.user-navigation__link div {
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+.user-navigation__link,
+.user-navigation__link span {
+  font-weight: 500;
+  font-family: "Poppins-Medium", "Arial", sans-serif;
+  color: #1d1613;
+  font-size: 14px;
+  line-height: 21px;
+  text-decoration: none;
+}
+.user-navigation__item--cart {
+  margin: 0 0 0 35px;
+
+  @media (max-width: $tablet) {
+    margin: 0;
+  }
+}
+.user-navigation__link div {
+  @media (max-width: $tablet) {
+    display: none;
+  }
+}
+.user-navigation__cart-icon {
+  display: none;
+  width: 18px;
+  height: 16px;
+  fill: #000;
+  stroke: #000;
+  stroke-width: 2px;
+
+  @media (max-width: $tablet) {
+    display: block;
+  }
+}

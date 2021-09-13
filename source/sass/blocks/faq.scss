@@ -1,0 +1,134 @@
+.faq__body {
+  padding: 50px 100px;
+
+  @media (max-width: $tablet) {
+    padding: 0 0 16px 0;
+  }
+}
+.faq__body h2 {
+  text-align: center;
+  font-family: "CormorantGaramond-Bold", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 44px;
+  letter-spacing: 0.03em;
+  color: #1d1613;
+  margin: 0 0 48px 0;
+
+  @media (max-width: $mobile) {
+    margin: 0 0 28px 0;
+  }
+}
+.faq__item {
+  border: 1px solid #a87b62;
+}
+.faq__item:not(:first-child) {
+  border-top: none;
+}
+.faq__question {
+  font-family: "Poppins-Medium", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  color: #1d1613;
+  width: 100%;
+  background-color: transparent;
+  padding: 43px 48px 44px 43px;
+  text-align: left;
+  border: none;
+  cursor: pointer;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 8px;
+    background-image: url(../img/accordion-arrow-down.svg);
+    background-size: 15px 8px;
+    background-repeat: no-repeat;
+    top: 51%;
+    right: 49px;
+    transform: translateY(-50%);
+  }
+
+  @media (max-width: $tablet) {
+    padding: 43px 48px 44px 48px;
+
+    &::after {
+      width: 23px;
+      height: 12px;
+      background-size: 23px 12px;
+    }
+  }
+
+  @media (max-width: $mobile) {
+    font-size: 16px;
+    line-height: 22px;
+    padding: 16px 80px 22px 24px;
+
+    &::after {
+      width: 22px;
+      height: 12px;
+      background-size: 22px 12px;
+      right: 24px;
+      top: 35%;
+    }
+  }
+}
+.faq__item:nth-child(4n + 2) .faq__question {
+  padding-right: 110px;
+}
+.faq__item:nth-child(4n + 3) .faq__question {
+  padding-right: 85px;
+}
+.faq__item:nth-child(4n + 4) .faq__question {
+  padding-right: 45px;
+}
+.faq__question br{
+  display: none;
+
+  @media(max-width: 320px) {
+    display: block;
+  }
+}
+.faq__answer {
+  position: relative;
+  margin: -36px 0 0 0;
+  font-size: 16px;
+  line-height: 21px;
+  color: #1d1613;
+  font-family: "Poppins-Regular", "Arial", sans-serif;
+  display: none;
+  padding: 0 0 41px 50px;
+  max-width: 59%;
+
+  @media (max-width: $tablet) {
+    max-width: 86%;
+    margin-top: -19px;
+    padding: 0 0 44px 50px;
+  }
+
+  @media (max-width: $mobile) {
+    font-size: 14px;
+    line-height: 20px;
+    padding: 10px 15px 20px 24px;
+  }
+}
+.faq__item--active .faq__answer {
+  display: block;
+}
+.faq__item--active .faq__question::after {
+  transform: rotate(180deg);
+  top: 46%;
+  right: 49px;
+
+  @media(max-width: $tablet) {
+    top: 43%;
+  }
+
+  @media(max-width: $mobile) {
+    right: 23px;
+    top: 25%;
+  }
+}

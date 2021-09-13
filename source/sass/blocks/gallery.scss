@@ -1,0 +1,113 @@
+.gallery__body {
+  padding: 50px 0 130px 0;
+  max-width: 1170px;
+
+  @media(max-width: $tablet) {
+    padding: 50px 0 80px 0;
+  }
+
+  @media(max-width: $mobile) {
+    padding: 32px 0 71px 0;
+  }
+}
+.gallery__header {
+  text-align: center;
+  margin: 0 0 60px 0;
+
+  @media(max-width: $mobile) {
+    margin: 0 0 47px 0;
+  }
+}
+.gallery__body h2 {
+  font-family: "CormorantGaramond-Bold", "Arial", sans-serif;
+  letter-spacing: 0.03em;
+  color: #000000;
+  margin: 0 0 27px 0;
+
+  @media(max-width: $tablet) {
+    margin: 0 0 15px 0;
+  }
+}
+.gallery__body h2 span {
+  font-size: 34px;
+  line-height: 44px;
+  color: #1d1613;
+}
+.gallery__body h2 span:first-child {
+  letter-spacing: 0px;
+  font-size: 42px;
+  line-height: 55px;
+}
+.gallery__link {
+  text-decoration: none;
+}
+.gallery__content {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(4, minmax(auto, max-content));
+  grid-template-rows: repeat(2, minmax(auto, max-content));
+  grid-gap: 34px 27px;
+
+  @media (max-width: $tablet) {
+    grid-gap: 20px 16px;
+  }
+
+  @media (max-width: $mobile) {
+    grid-template-columns: repeat(2, minmax(auto, max-content));
+    grid-template-rows: repeat(3, minmax(auto, max-content));
+    grid-gap: 27px 24px;
+  }
+}
+.gallery__content figure {
+  margin: 0;
+}
+.gallery__item-2 {
+  grid-row: span 2;
+}
+.gallery__content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.gallery__item--medium {
+  max-width: 230px;
+  max-height: 230px;
+
+  @media (max-width: $tablet) {
+    max-width: 133px;
+    max-height: 133px;
+  }
+}
+.gallery__item--big {
+  max-width: 399px;
+  max-height: 412px;
+
+  @media (max-width: $tablet) {
+    max-width: 231px;
+    max-height: 240px;
+  }
+
+  @media (max-width: $mobile) {
+    max-width: 133px;
+    max-height: 247px;
+  }
+}
+.gallery__item--small {
+  max-width: 230px;
+  max-height: 150px;
+
+  @media (max-width: $tablet) {
+    max-width: 133px;
+    max-height: 87px;
+  }
+}
+.gallery__item-3 {
+  @media(max-width: $mobile) {
+    display: none;
+  }
+}
+.gallery__item-4 {
+  @media(max-width: $mobile) {
+    display: none;
+  }
+}
