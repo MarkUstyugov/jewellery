@@ -110,6 +110,7 @@
   font-size: 14px;
   line-height: 18px;
   color: #1d1613;
+  cursor: pointer;
 
   &::before {
     content: "";
@@ -255,6 +256,6 @@
     padding: 0 10px;
   }
 }
-.filter__input:focus label{
+.filter__input input[type="checkbox"]:focus + label::before {
   outline: auto;
 }

@@ -31,6 +31,14 @@
 }
 .new__slide {
   text-align: center;
+
+  @media (max-width: $tablet) {
+
+  }
+
+  @media (max-width: $mobile) {
+    min-width: 130px;
+  }
 }
 .new__slide img {
   width: 270px;
@@ -41,7 +49,8 @@
   }
 
   @media (max-width: $mobile) {
-    width: 130px;
+    min-width: 130px;
+    min-height: 136px;
   }
 }
 .new__slider-button {
