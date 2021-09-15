@@ -1,9 +1,19 @@
 .login {
-  width: 100%;
+  // width: 100%;
+  width: 430px;
   text-align: center;
   background: #f0eae4;
   box-shadow: 0px 5px 32px rgba(226, 221, 215, 0.24);
-  position: relative;
+  margin: 0 auto;
+  transform: translateY(10%);
+
+  @media (max-width: $tablet) {
+    width: 442px;
+  }
+
+  @media (max-width: $mobile) {
+    width: 270px;
+  }
 }
 .login__body {
   padding: 51px 45px 53px;
@@ -19,23 +29,17 @@
 .login__close-button {
   border: none;
   background-color: transparent;
-  padding: 0;
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 10px;
+  right: 10px;
   z-index: 100;
   cursor: pointer;
-  width: 14px;
-  height: 14px;
+  padding: 10px 10px 10px 10px;
 
   @media (max-width: $tablet) {
-    width: 20px;
-    height: 20px;
   }
 
   @media (max-width: $mobile) {
-    width: 14px;
-    height: 14px;
   }
 }
 .login__image-wrapper img {
@@ -58,10 +62,10 @@
 }
 .login h2 {
   margin: 0 0 30px 0;
-  font-family: 'CormorantGaramond-Bold', 'Arial', sans-serif;
-    font-weight: 700;
-    font-size: 34px;
-    line-height: 44px;
+  font-family: "CormorantGaramond-Bold", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 44px;
 
   @media (max-width: $mobile) {
     margin: 0 0 24px 0;
@@ -102,7 +106,7 @@
   color: #ffffff;
   margin: 46px 0 0 0;
 
-  @media(max-width: $mobile) {
+  @media (max-width: $mobile) {
     padding: 24px 28px;
     margin: 35px 0 0 0;
   }

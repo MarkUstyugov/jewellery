@@ -185,7 +185,7 @@ const isEscEvent = (evt) => {
 };
 
 const modalShow = () => {
-  overlay.classList.add('overlay--open');
+  // overlay.classList.add('overlay--open');
   modal.classList.add('modal--open');
   body.classList.add('no-scroll');
   modalEmail.focus();
@@ -210,7 +210,7 @@ const modalShow = () => {
 
 const modalClose = () => {
   closeModalBtn.addEventListener('click', closeModalButton);
-  document.addEventListener("click", closeModalOverlay);
+  modal.addEventListener("click", closeModalOverlay);
   window.addEventListener("keydown", closeModalEsc);
 }
 
@@ -222,14 +222,14 @@ const closeModalButton = () => {
   }
 
   closeModalBtn.removeEventListener('click', closeModalButton);
-  document.removeEventListener("click", closeModalOverlay);
+  modal.removeEventListener("click", closeModalOverlay);
   window.removeEventListener("keydown", closeModalEsc);
 }
 
 const closeModalOverlay = (evt) => {
   let target = evt.target;
   if (!target.closest(".login-link")) {
-    if (!target.closest(".modal")) {
+    if (!target.closest(".login")) {
       overlay.classList.remove('overlay--open');
       modal.classList.remove('modal--open');
       if (!header.classList.contains('header--menu')) {
@@ -326,3 +326,4 @@ const trapFocus = (element) => {
 if (modal) {
   trapFocus(modal);
 }
+
