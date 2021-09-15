@@ -11,57 +11,63 @@ if (noJs) {
   body.classList.remove('no-js');
   header.classList.remove('header--menu');
 }
-//////////////////
+
 const filterlShow = () => {
   filter.classList.add('filter--open');
   overlay.classList.add('overlay--open');
   filterClose();
 }
 
+const filterClose = () => {
+  closeFilterButton.addEventListener('click', closeFilterButtonFunc);
+  overlay.addEventListener('click', closeFilterOverlay);
+  window.addEventListener('keydown', closeFilterEsc);
+  window.addEventListener('resize', removeFilterOverlayDesk);
+}
+
 const closeFilterButtonFunc = () => {
   overlay.classList.remove('overlay--open');
   filter.classList.remove('filter--open');
 
-  closeFilterButton.removeEventListener('click', closeModalButton);
-  modal.removeEventListener("click", closeModalOverlay);
-  window.removeEventListener("keydown", closeModalEsc);
-}
-
-const filterClose = () => {
-  closeFilterButton.addEventListener('click', closeFilterButtonFunc);
-  filter.addEventListener("click", closeFilterOverlay);
+  closeFilterButton.removeEventListener('click', closeFilterButtonFunc);
+  document.removeEventListener("click", closeFilterOverlay);
+  window.removeEventListener("keydown", closeFilterEsc);
+  window.removeEventListener('resize', removeFilterOverlayDesk);
 }
 
 const closeFilterOverlay = (evt) => {
-  // let target = evt.target;
-  // if (!target.closest(filterButton)) {
-  //   if (!target.closest(".filter")) {
-  //     overlay.classList.remove('overlay--open');
+  let target = evt.target;
+  if (!target.closest('.catalog__filter')) {
+    if (!target.closest('.filter')) {
+      overlay.classList.remove('overlay--open');
+      filter.classList.remove('filter--open');
 
-  //     closeModalBtn.removeEventListener('click', closeFilterButtonFunc);
-  //     document.removeEventListener("click", closeModalOverlay);
-  //     window.removeEventListener("keydown", closeModalEsc);
-  //   }
-  // }
+      closeFilterButton.removeEventListener('click', closeFilterButtonFunc);
+      overlay.removeEventListener("click", closeFilterOverlay);
+      window.removeEventListener("keydown", closeFilterEsc);
+      window.removeEventListener('resize', removeFilterOverlayDesk);
+    }
+  }
+
 }
 
-filterButton.addEventListener('click', filterlShow);
-///////////////////////////
+const closeFilterEsc = (evt) => {
+  if (isEscEvent(evt)) {
+    if (filter.classList.contains('filter--open')) {
+      evt.stopPropagation();
+      overlay.classList.remove('overlay--open');
+      filter.classList.remove('filter--open');
 
-// if (filterButton) {
-//   filterButton.addEventListener('click', (evt) => {
-//     evt.preventDefault();
-//     filter.classList.toggle('filter--open');
-//     overlay.classList.add('overlay--open');
-//   });
-// }
+      closeModalBtn.removeEventListener('click', closeFilterButton);
+      overlay.removeEventListener("click", closeFilterOverlay);
+      window.removeEventListener("keydown", closeFilterEsc);
+    }
+  }
+}
 
-// if (closeFilterButton) {
-//   closeFilterButton.addEventListener('click', (evt) => {
-//     evt.preventDefault();
-//     filter.classList.remove('filter--open');
-//   });
-// }
+if (filterButton) {
+  filterButton.addEventListener('click', filterlShow);
+}
 
 if (menuButton) {
   menuButton.addEventListener('click', (evt) => {
@@ -313,7 +319,6 @@ const initSwiperCatalog = () => {
   swiperCatalog = new window.Swiper('.catalog__slider', {
     loop: true,
     slidesPerView: 1,
-    // autoHeight: true,
     pagination: {
       el: document.querySelector('.catalog__slider-pagination'),
       clickable: 'true',
@@ -364,3 +369,9 @@ if (modal) {
   trapFocus(modal);
 }
 
+const removeFilterOverlayDesk = () => {
+  if (window.screen.width > 1023) {
+    overlay.classList.remove('overlay--open');
+    filter.classList.remove('filter--open');
+  }
+}
