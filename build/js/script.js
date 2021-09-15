@@ -5,25 +5,64 @@ const filterButton = document.querySelector('.catalog__filter-open');
 const filter = document.querySelector('.filter');
 const closeFilterButton = document.querySelector('.filter__button-close');
 const noJs = document.querySelector('.no-js');
+const overlay = document.querySelector('.overlay');
 
 if (noJs) {
   body.classList.remove('no-js');
   header.classList.remove('header--menu');
 }
-
-if (filterButton) {
-  filterButton.addEventListener('click', (evt) => {
-    evt.preventDefault();
-    filter.classList.toggle('filter--open');
-  });
+//////////////////
+const filterlShow = () => {
+  filter.classList.add('filter--open');
+  overlay.classList.add('overlay--open');
+  filterClose();
 }
 
-if (closeFilterButton) {
-  closeFilterButton.addEventListener('click', (evt) => {
-    evt.preventDefault();
-    filter.classList.remove('filter--open');
-  });
+const closeFilterButtonFunc = () => {
+  overlay.classList.remove('overlay--open');
+  filter.classList.remove('filter--open');
+
+  closeFilterButton.removeEventListener('click', closeModalButton);
+  modal.removeEventListener("click", closeModalOverlay);
+  window.removeEventListener("keydown", closeModalEsc);
 }
+
+const filterClose = () => {
+  closeFilterButton.addEventListener('click', closeFilterButtonFunc);
+  filter.addEventListener("click", closeModalOverlay);
+  window.addEventListener("keydown", closeModalEsc);
+}
+
+const closeFilterOverlay = (evt) => {
+  let target = evt.target;
+  if (!target.closest(filterButton)) {
+    if (!target.closest(".filter")) {
+      overlay.classList.remove('overlay--open');
+
+      closeModalBtn.removeEventListener('click', closeFilterButtonFunc);
+      document.removeEventListener("click", closeModalOverlay);
+      window.removeEventListener("keydown", closeModalEsc);
+    }
+  }
+}
+
+filterButton.addEventListener('click', filterlShow);
+///////////////////////////
+
+// if (filterButton) {
+//   filterButton.addEventListener('click', (evt) => {
+//     evt.preventDefault();
+//     filter.classList.toggle('filter--open');
+//     overlay.classList.add('overlay--open');
+//   });
+// }
+
+// if (closeFilterButton) {
+//   closeFilterButton.addEventListener('click', (evt) => {
+//     evt.preventDefault();
+//     filter.classList.remove('filter--open');
+//   });
+// }
 
 if (menuButton) {
   menuButton.addEventListener('click', (evt) => {
@@ -164,7 +203,7 @@ const initSlider = () => {
 
 initSlider();
 
-const overlay = document.querySelector('.overlay');
+
 const loginLink = document.querySelectorAll('.login-link');
 const modal = document.querySelector('.modal');
 const closeModalBtn = document.querySelector('.login__close-button');
@@ -185,7 +224,6 @@ const isEscEvent = (evt) => {
 };
 
 const modalShow = () => {
-  // overlay.classList.add('overlay--open');
   modal.classList.add('modal--open');
   body.classList.add('no-scroll');
   modalEmail.focus();
@@ -310,17 +348,17 @@ const trapFocus = (element) => {
       return;
     }
 
-    if ( evt.shiftKey ) {
+    if (evt.shiftKey) {
       if (document.activeElement === firstFocusableEl) {
         lastFocusableEl.focus();
         evt.preventDefault();
-        }
-      } else {
+      }
+    } else {
       if (document.activeElement === lastFocusableEl) {
         firstFocusableEl.focus();
         evt.preventDefault();
-        }
       }
+    }
   });
 }
 if (modal) {
