@@ -7,20 +7,23 @@ const closeFilterButton = document.querySelector('.filter__button-close');
 const noJs = document.querySelector('.no-js');
 const overlay = document.querySelector('.overlay');
 
+const filterWrapper = document.querySelector('.filter-wrapper');
+
 if (noJs) {
   body.classList.remove('no-js');
   header.classList.remove('header--menu');
 }
 
 const filterlShow = () => {
+  filterWrapper.classList.add('filter-wrapper--open');
   filter.classList.add('filter--open');
-  overlay.classList.add('overlay--open');
+  body.classList.add('no-scroll');
   filterClose();
 }
 
 const filterClose = () => {
   closeFilterButton.addEventListener('click', closeFilterButtonFunc);
-  overlay.addEventListener('click', closeFilterOverlay);
+  filterWrapper.addEventListener('click', closeFilterOverlay);
   window.addEventListener('keydown', closeFilterEsc);
   window.addEventListener('resize', removeFilterOverlayDesk);
 }
@@ -28,6 +31,8 @@ const filterClose = () => {
 const closeFilterButtonFunc = () => {
   overlay.classList.remove('overlay--open');
   filter.classList.remove('filter--open');
+  filterWrapper.classList.remove('filter-wrapper--open');
+  body.classList.remove('no-scroll');
 
   closeFilterButton.removeEventListener('click', closeFilterButtonFunc);
   document.removeEventListener("click", closeFilterOverlay);
@@ -39,27 +44,29 @@ const closeFilterOverlay = (evt) => {
   let target = evt.target;
   if (!target.closest('.catalog__filter')) {
     if (!target.closest('.filter')) {
-      overlay.classList.remove('overlay--open');
+      filterWrapper.classList.remove('filter-wrapper--open');
       filter.classList.remove('filter--open');
+      body.classList.remove('no-scroll');
 
       closeFilterButton.removeEventListener('click', closeFilterButtonFunc);
-      overlay.removeEventListener("click", closeFilterOverlay);
+      filterWrapper.removeEventListener("click", closeFilterOverlay);
       window.removeEventListener("keydown", closeFilterEsc);
       window.removeEventListener('resize', removeFilterOverlayDesk);
     }
   }
-
 }
 
 const closeFilterEsc = (evt) => {
   if (isEscEvent(evt)) {
     if (filter.classList.contains('filter--open')) {
       evt.stopPropagation();
-      overlay.classList.remove('overlay--open');
+      filterWrapper.classList.remove('overlay--open');
       filter.classList.remove('filter--open');
+      filterWrapper.classList.remove('filter-wrapper--open');
+      body.classList.remove('no-scroll');
 
       closeModalBtn.removeEventListener('click', closeFilterButton);
-      overlay.removeEventListener("click", closeFilterOverlay);
+      filterWrapper.removeEventListener("click", closeFilterOverlay);
       window.removeEventListener("keydown", closeFilterEsc);
     }
   }
@@ -373,5 +380,6 @@ const removeFilterOverlayDesk = () => {
   if (window.screen.width > 1023) {
     overlay.classList.remove('overlay--open');
     filter.classList.remove('filter--open');
+    body.classList.remove('no-scroll');
   }
 }

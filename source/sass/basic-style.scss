@@ -72,7 +72,7 @@ img {
   max-height: 100vh;
   overflow: hidden;
 }
-.no-js.no-scroll{
+.no-js.no-scroll {
   position: static;
   overflow: auto;
   max-height: none;
@@ -150,4 +150,22 @@ img {
 }
 .index__main a {
   color: #000000;
+}
+.filter-wrapper {
+  @media (max-width: $tablet) {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 200;
+    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+}
+.filter-wrapper--open {
+  @media (max-width: $tablet) {
+    display: block;
+  }
 }

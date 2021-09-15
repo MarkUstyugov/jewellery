@@ -1,14 +1,4 @@
 .modal {
-  // width: 430px;
-  // display: none;
-  // position: fixed;
-  // top: 50%;
-  // margin: 0 auto;
-  // transform: translateY(-50%);
-  // right: 0;
-  // left: 0;
-  // z-index: 200;
-
   display: none;
   position: fixed;
   top: 0;
@@ -18,20 +8,8 @@
   z-index: 200;
   overflow-y: auto;
   background-color: rgba(0,0,0, .6);
-
-  @media (max-width: $tablet) {
-    // width: 442px;
-  }
-
-  @media (max-width: $mobile) {
-    // width: 270px;
-  }
 }
 .modal--open {
   display: block;
 }
-// .login__wrapper {
-//   position: absolute;
-//   left: 50%;
-//   transform: translateX(-50%);
-// }
+

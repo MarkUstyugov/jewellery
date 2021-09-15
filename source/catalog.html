@@ -119,87 +119,89 @@
       <div class="catalog__body">
         <div class="catalog__filter-wrapper">
           <button class="catalog__filter-open" aria-label="кпока открытия фильтра товаров">Filter</button>
-          <div class="catalog__filter filter">
-            <button class="filter__button-close" aria-label="кпока закрытия фильтра товаров">
-              <svg class="filter__close-icon" width="32" height="32">
-                <use xlink:href="img/sprite.svg#close-round"></use>
-              </svg>
-            </button>
-            <form action="#">
-              <div class="filter__item">
-                <button class="filter__button" type="button" aria-label="список продуктов">Product</button>
-                <div class="filter__content">
-                  <div class="filter__input">
-                    <input class="visually-hidden" type="checkbox" name="necklaces" id="necklaces" tabindex="0">
-                    <label for="necklaces">Necklaces</label>
-                  </div>
-                  <div class="filter__input">
-                    <input class="visually-hidden" type="checkbox" name="chokers" id="chokers" tabindex="0">
-                    <label for="chokers">Chokers</label>
-                  </div>
-                  <div class="filter__input">
-                    <input class="visually-hidden" type="checkbox" name="rings" id="rings">
-                    <label for="rings">Rings</label>
-                  </div>
-                  <div class="filter__input">
-                    <input class="visually-hidden" type="checkbox" name="earrings" id="earrings">
-                    <label for="earrings">Earrings</label>
-                  </div>
-                </div>
-              </div>
-              <div class="filter__item">
-                <button class="filter__button" type="button" aria-label="список материалов">Material</button>
-                <div class="filter__content">
-                  <div class="filter__input">
-                    <input class="visually-hidden" type="checkbox" name="gold" id="gold">
-                    <label for="gold">Gold</label>
-                  </div>
-                  <div class="filter__input">
-                    <input class="visually-hidden" type="checkbox" name="silver" id="silver">
-                    <label for="silver">Silver</label>
+          <div class="filter-wrapper">
+            <div class="catalog__filter filter">
+              <button class="filter__button-close" aria-label="кпока закрытия фильтра товаров">
+                <svg class="filter__close-icon" width="32" height="32">
+                  <use xlink:href="img/sprite.svg#close-round"></use>
+                </svg>
+              </button>
+              <form action="#">
+                <div class="filter__item">
+                  <button class="filter__button" type="button" aria-label="список продуктов">Product</button>
+                  <div class="filter__content">
+                    <div class="filter__input">
+                      <input class="visually-hidden" type="checkbox" name="necklaces" id="necklaces" tabindex="0">
+                      <label for="necklaces">Necklaces</label>
+                    </div>
+                    <div class="filter__input">
+                      <input class="visually-hidden" type="checkbox" name="chokers" id="chokers" tabindex="0">
+                      <label for="chokers">Chokers</label>
+                    </div>
+                    <div class="filter__input">
+                      <input class="visually-hidden" type="checkbox" name="rings" id="rings">
+                      <label for="rings">Rings</label>
+                    </div>
+                    <div class="filter__input">
+                      <input class="visually-hidden" type="checkbox" name="earrings" id="earrings">
+                      <label for="earrings">Earrings</label>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="filter__item">
-                <button class="filter__button" type="button" aria-label="список коллекций">Collection</button>
-                <div class="filter__content">
-                  <div class="filter__input">
-                    <input class="visually-hidden" type="checkbox" name="pink-flamingo" id="pink-flamingo">
-                    <label for="pink-flamingo">Pink flamingo</label>
-                  </div>
-                  <div class="filter__input">
-                    <input class="visually-hidden" type="checkbox" name="dreams" id="dreams">
-                    <label for="dreams">Dreams</label>
+                <div class="filter__item">
+                  <button class="filter__button" type="button" aria-label="список материалов">Material</button>
+                  <div class="filter__content">
+                    <div class="filter__input">
+                      <input class="visually-hidden" type="checkbox" name="gold" id="gold">
+                      <label for="gold">Gold</label>
+                    </div>
+                    <div class="filter__input">
+                      <input class="visually-hidden" type="checkbox" name="silver" id="silver">
+                      <label for="silver">Silver</label>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="filter__item">
-                <button class="filter__button" type="button" aria-label="цена">Price</button>
-                <div class="filter__content filter__content--price">
-                  <div class="filter__price-range price-slider">
-                    <div class="price-slider__control">
-                      <div class="price-slider__scale">
-                        <div class="price-slider__bar"></div>
+                <div class="filter__item">
+                  <button class="filter__button" type="button" aria-label="список коллекций">Collection</button>
+                  <div class="filter__content">
+                    <div class="filter__input">
+                      <input class="visually-hidden" type="checkbox" name="pink-flamingo" id="pink-flamingo">
+                      <label for="pink-flamingo">Pink flamingo</label>
+                    </div>
+                    <div class="filter__input">
+                      <input class="visually-hidden" type="checkbox" name="dreams" id="dreams">
+                      <label for="dreams">Dreams</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="filter__item">
+                  <button class="filter__button" type="button" aria-label="цена">Price</button>
+                  <div class="filter__content filter__content--price">
+                    <div class="filter__price-range price-slider">
+                      <div class="price-slider__control">
+                        <div class="price-slider__scale">
+                          <div class="price-slider__bar"></div>
+                        </div>
+                        <button class="price-slider__toggle price-slider__toggle--min" type="button"
+                          aria-label="минимальная цена"></button>
+                        <button class="price-slider__toggle price-slider__toggle--max" type="button"
+                          aria-label="максимальная цена"></button>
                       </div>
-                      <button class="price-slider__toggle price-slider__toggle--min" type="button"
-                        aria-label="минимальная цена"></button>
-                      <button class="price-slider__toggle price-slider__toggle--max" type="button"
-                        aria-label="максимальная цена"></button>
-                    </div>
-                    <div class="price-slider__price">
-                      <div class="price-slider__number price-slider__number--min">$ 55</div>
-                      <div class="price-slider__number price-slider__number--max">$ 155</div>
+                      <div class="price-slider__price">
+                        <div class="price-slider__number price-slider__number--min">$ 55</div>
+                        <div class="price-slider__number price-slider__number--max">$ 155</div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="filter__form-buttons">
-                <button class="filter__form-button filter__form-button--submit" type="submit"
-                  aria-label="применить фильтр">Apply</button>
-                <button class="filter__form-button filter__form-button--reset" type="reset"
-                  aria-label="очистить фильтр">Clear All</button>
-              </div>
-            </form>
+                <div class="filter__form-buttons">
+                  <button class="filter__form-button filter__form-button--submit" type="submit"
+                    aria-label="применить фильтр">Apply</button>
+                  <button class="filter__form-button filter__form-button--reset" type="reset"
+                    aria-label="очистить фильтр">Clear All</button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
         <div class="catalog__slider-wrapper">
@@ -1718,11 +1720,11 @@
           <form class="login__form" action="#">
             <div class="login__input login__input--email">
               <label for="login-email"></label>
-              <input type="text" placeholder="Your E-mail" id="login-email" name="login-email" required>
+              <input type="email" placeholder="Your E-mail" id="login-email" name="login-email" required>
             </div>
             <div class="login__input">
               <label for="login-password"></label>
-              <input type="text" placeholder="Password" id="login-password" name="login-password" required>
+              <input type="password" placeholder="Password" id="login-password" name="login-password" required>
             </div>
             <div class="login__forget-link-wrapper">
               <a class="login__forget-link" href="#">Forgot your password?</a>
