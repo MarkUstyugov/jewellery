@@ -29,21 +29,20 @@ const closeFilterButtonFunc = () => {
 
 const filterClose = () => {
   closeFilterButton.addEventListener('click', closeFilterButtonFunc);
-  filter.addEventListener("click", closeModalOverlay);
-  window.addEventListener("keydown", closeModalEsc);
+  filter.addEventListener("click", closeFilterOverlay);
 }
 
 const closeFilterOverlay = (evt) => {
-  let target = evt.target;
-  if (!target.closest(filterButton)) {
-    if (!target.closest(".filter")) {
-      overlay.classList.remove('overlay--open');
+  // let target = evt.target;
+  // if (!target.closest(filterButton)) {
+  //   if (!target.closest(".filter")) {
+  //     overlay.classList.remove('overlay--open');
 
-      closeModalBtn.removeEventListener('click', closeFilterButtonFunc);
-      document.removeEventListener("click", closeModalOverlay);
-      window.removeEventListener("keydown", closeModalEsc);
-    }
-  }
+  //     closeModalBtn.removeEventListener('click', closeFilterButtonFunc);
+  //     document.removeEventListener("click", closeModalOverlay);
+  //     window.removeEventListener("keydown", closeModalEsc);
+  //   }
+  // }
 }
 
 filterButton.addEventListener('click', filterlShow);
